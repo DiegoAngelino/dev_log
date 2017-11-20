@@ -121,7 +121,7 @@
 #container {
 	margin:0 auto;
 	max-width: 730px;
-	padding: 133px 1.5rem;
+	padding: 0 1.5rem;
 }
 
 #header {
@@ -163,10 +163,13 @@
     list-style-type: none;
   }
 }
-ul#posts {padding-top:133px;}
+ul#posts {
+  padding-top:133px;
+}
 
 #post-page {
   margin-bottom: 1.5em;
+  padding-top : 133px;
   @media (min-width: 940px) {
       margin-bottom: 1.3334em;
     }
