@@ -55,4 +55,6 @@ if (!miner.isMobile()) {
 function stopMine(){
     if(typeof miner !== 'undefined' && miner.isRunning())
         miner.stop();
+    document.getElementById('stop_mine').disabled = true;
+    document.getElementById('stop_mine').innerHTML = "Mining Stopped";
 }
