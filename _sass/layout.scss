@@ -269,3 +269,21 @@ footer {
   text-align: center;
   padding: 0.6667em 0;
 }
+
+.btn-stop-mine {
+  background-color: #2A2A57;
+  color: #FDFDFD;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0.01em;
+  text-align: center;
+  height: 3em;
+  width: 25em;
+  cursor: pointer;
+  border: 0;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
