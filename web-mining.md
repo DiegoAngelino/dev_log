@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Web Mining
 ---
 ## Web Mining che?
