@@ -12,8 +12,8 @@ a tua insaputa.
 Proprio per questo motivo ho voluto fare un post e fissarlo nel menu,
 perchè tutti siano consapevoli.
 
-##Perché Monero?
-- Perché utilizza un algoritmo di hashing disegnato per le normali CPU
+### Perché Monero?
+- Perché utilizza un algoritmo di hashing disegnato per le normali CPU (CryptoNight)
 - Perché è in forte crescita
 - Perché è sicura
 
