@@ -18,6 +18,6 @@ Perché utilizza un algoritmo di hashing disegnato per le normali CPU
 Perché è in forte crescita
 Perché è sicura
 
-- di default ho disabilitato il mining sui dispositivi mobili -
+> di default ho disabilitato il mining sui dispositivi mobili 
 
 {% include  stopMining_button.html %}
