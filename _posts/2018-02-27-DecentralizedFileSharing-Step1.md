@@ -49,4 +49,4 @@ puoi trovare tutto il codice su [GitHub](https://github.com/DiegoAngelino/Decent
 
 
 #EnjoyCoding
-[wrote with <3 by Diego](justAnotherVacuumLink)
+[wrote with <3 by Diego](#)
