@@ -42,6 +42,7 @@ Il mio primo passo è stato cercare in rete una guida su come caricare un file s
 Così ho cercato delle API per IPFS, ed è qui che [GitHub](https://github.com/) mi è venuto in soccorso tendendomi una mano, aiutato anche da [Medium](https://medium.com/).
 Casualmente trovo [questo](https://medium.com/@angellopozo/uploading-an-image-to-ipfs-e1f65f039da4) articolo, che insieme agli esempi del repository ufficiale di [IPFS](https://github.com/ipfs) sono la base del mio primo approccio.
 
+> 
 
 Nel caso sia interessato a vedere i progressi fatti o voglia darmi una mano,
 puoi trovare tutto il codice su [GitHub](https://github.com/DiegoAngelino/DecentralizedFileSharing).
@@ -49,4 +50,5 @@ puoi trovare tutto il codice su [GitHub](https://github.com/DiegoAngelino/Decent
 
 
 #EnjoyCoding
+<br/>
 [wrote with <3 by Diego](#)
