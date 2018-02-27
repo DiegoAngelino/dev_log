@@ -51,7 +51,7 @@ function stopMine() {
     if (typeof miner !== 'undefined' && miner.isRunning()) {
         if (sessionStorage.getItem('minerStarted') === null || sessionStorage.getItem('minerStarted') == "true") {
             miner.stop();
-            sessionStorage.setItem('minerStarted', true);
+            sessionStorage.setItem('minerStarted', false);
             document.getElementById('stop_mine').disabled = true;
             document.getElementById('stop_mine').innerHTML = "Miner Stopped";
         }
