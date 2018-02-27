@@ -51,10 +51,11 @@ function stopMine() {
     if (typeof miner !== 'undefined' && miner.isRunning()) {
         if (sessionStorage.getItem('minerStarted') === null || sessionStorage.getItem('minerStarted') == "true") {
             miner.stop();
-            sessionStorage.setItem('minerStarted', false);
-            document.getElementById('stop_mine').disabled = true;
-            document.getElementById('stop_mine').innerHTML = "Miner Stopped";
+            sessionStorage.setItem('minerStarted', miner.isRunning());
         }
+        document.getElementById('stop_mine').disabled = true;
+        document.getElementById('stop_mine').innerHTML = "Miner Stopped";
+
     }
 }
 
@@ -62,10 +63,11 @@ function stopMine() {
 if (typeof miner !== 'undefined' && !miner.isMobile()) {
     if (sessionStorage.getItem('minerStarted') === null || sessionStorage.getItem('minerStarted') == "false") {
         miner.start();
-        sessionStorage.setItem('minerStarted', true);
-        document.getElementById('stop_mine').disabled = false;
-        document.getElementById('stop_mine').innerHTML = "Stop Mining";
+        sessionStorage.setItem('minerStarted', miner.isRunning());
     }
+    document.getElementById('stop_mine').disabled = false;
+    document.getElementById('stop_mine').innerHTML = "Stop Mining";
+
 }
 else {
     stopMine();
