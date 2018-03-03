@@ -47,20 +47,21 @@ var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log'
     theme: 'light'
 });
 
-function stopMine() {
-    if (typeof miner !== 'undefined' && miner.isRunning()) {
-        miner.stop();
-    }
-}
+sessionStorage.setItem('minerStarted', miner.isRunning());
 
 // Only start on non-mobile devices
-if (typeof miner !== 'undefined' && !miner.isMobile()) {
+if (typeof miner !== 'undefined' && !miner.isMobile() && sessionStorage.minerStarted == "false") {
     miner.start();
 }
 else {
     stopMine();
 }
 
-sessionStorage.setItem('minerStarted', miner.isRunning());
 document.getElementById('stop_mine').disabled = !miner.isRunning();
 document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
+
+function stopMine() {
+    if (typeof miner !== 'undefined' && miner.isRunning()) {
+        miner.stop();
+    }
+}
