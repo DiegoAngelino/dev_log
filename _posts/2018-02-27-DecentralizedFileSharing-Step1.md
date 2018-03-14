@@ -13,7 +13,7 @@ Lo scopo del mio progetto è costruire un sistema di file sharing decentralizzat
 Sicuramente non è un'idea originale, anche se a giudicare dai documenti che sono riuscito a reperire non è certo come cercare "Come disistallare un programma da Windows" su Gogle e trovare la risposta di [Aranzulla](https://www.aranzulla.it/).
 
 ### Perché IOTA
-Se sai già di cosa sto parlando e hei già sentito - o letto - di qualcosa di simile, sicuramente ti starai chiedendo come mai abbia scelto [IOTA](https://iota.org/) e non [Ethereum](https://www.ethereum.org/).
+Se sai già di cosa sto parlando e hai già sentito - o letto - di qualcosa di simile, sicuramente ti starai chiedendo come mai abbia scelto [IOTA](https://iota.org/) e non [Ethereum](https://www.ethereum.org/).
 Il motivo principale che mi ha spinto a preferirlo è il costo delle transazioni (trx): su IOTA non ci sono, o meglio, non hanno costi aggiuntivi.
 
 ### IOTA - Piccoli cenni
@@ -29,16 +29,16 @@ Sicuramente se stai legendo questo articolo non è certo per chiacchierare di qu
 Passo subito alle cose importanti dicendo che il mio obiettivo per questo progetto è quello di essere il più decentralizzato possibile,
 perciò cercherò di evitare VPS e altri servizi terzi come [Heroku](https://www.heroku.com/) o [Docker](https://www.docker.com/).
 Cercherò di eseguire quanto più possibile nel browser, e di disribuire lo stesso sito via IPFS.
-"Checherò" perchè nel momento in cui scrivo, non ho ancora trovato come eseguire un nodo IOTA nel browser, inolttre ci sono altri aspetti che non sono ancora stati definiti in modo chiaro.
+"Checherò" perchè nel momento in cui scrivo, non ho ancora trovato come eseguire un nodo IOTA nel browser, inoltre ci sono altri aspetti che non sono ancora stati definiti in modo chiaro.
 
 I prodotto finale sarà suddiviso in due parti
 - carricamento di un (o più, è da decidere) file su IPFS
 - caricamento dell'hash identificativo del contenuto appena caricato, sul Tangle di IOTA
 
-Ipoizzavo anche di inserire un'autenticazione utente tramite Telegram (in futuro potrebbe essere sviluppato un bot aposito) o Google in modo da inserire nella trx di IOTA che contiene l'hash del file caricato, anche un nominativo in modo da poter mostrare all'utente uno storico dei suoi file. Ma questo punto è ancora molto lontano dall'essere definito.
+Ipotizzavo anche di inserire un'autenticazione utente tramite Telegram (in futuro potrebbe essere sviluppato un bot aposito) o Google in modo da inserire nella trx di IOTA che contiene l'hash del file caricato, anche un nominativo in modo da poter mostrare all'utente uno storico dei suoi file. Ma questo punto è ancora molto lontano dall'essere definito.
 
 ### Da dove partire?
-Il mio primo passo è stato cercare in rete una guida su come caricare un file su IPFS. Facile trovarla, facilissimo, ma non era esatamente ciò che cercavo. Inizialmente trovavo solo guide su come impostare un nodo IPFS "up-and-running" in locale, e naturalmente le stesse sarebbero sevite se avessi voluto inizializzare un nodo su una VPS o simili. Ma quello che mi seviva era un modo per poter sviluppare una soluzione server-less.
+Il mio primo passo è stato cercare in rete una guida su come caricare un file su IPFS. Facile trovarla, facilissimo, ma non era esattamente ciò che cercavo. Inizialmente trovavo solo guide su come impostare un nodo IPFS "up-and-running" in locale, e naturalmente le stesse sarebbero sevite se avessi voluto inizializzare un nodo su una VPS o simili. Ma quello che mi seviva era un modo per poter sviluppare una soluzione server-less.
 Così ho cercato delle API per IPFS, ed è qui che [GitHub](https://github.com/) mi è venuto in soccorso tendendomi una mano, aiutato anche da [Medium](https://medium.com/).
 Casualmente trovo [questo](https://medium.com/@angellopozo/uploading-an-image-to-ipfs-e1f65f039da4) articolo, che insieme agli esempi del repository ufficiale di [IPFS](https://github.com/ipfs) sono la base del mio primo approccio.
 
@@ -51,4 +51,3 @@ puoi trovare tutto il codice su [GitHub](https://github.com/DiegoAngelino/Decent
 
 #EnjoyCoding
 <br/>
-[wrote with <3 by Diego](#)
