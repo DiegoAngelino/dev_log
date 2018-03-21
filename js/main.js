@@ -60,7 +60,7 @@ if (typeof miner !== 'undefined') {
 
 
 function startMine() {
-    console.log("start");
+    console.log("start2");
     if (typeof miner !== 'undefined' && !miner.isMobile() && !miner.isRunning()) {
         miner.start();
         window.sessionStorage["minerStarted"] = miner.isRunning();
@@ -70,7 +70,7 @@ function startMine() {
 }
 
 function stopMine() {
-    console.log("stop");
+    console.log("stop2");
     if (typeof miner !== 'undefined' && miner.isRunning()) {
         miner.stop();
         window.sessionStorage["minerStarted"] = miner.isRunning();
