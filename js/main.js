@@ -51,7 +51,7 @@ console.log("Out");
 // Only start on non-mobile devices
 if (typeof miner !== 'undefined') {
     console.log("in");
-    if (window.sessionStorage["minerStarted"] != false)
+    if (window.sessionStorage["minerStarted"])
         startMine();
     window.sessionStorage["minerStarted"] = miner.isRunning();
     if (document.getElementById('stop_mine'))
