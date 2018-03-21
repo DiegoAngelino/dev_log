@@ -63,7 +63,9 @@ function startMine() {
     console.log("start");
     if (typeof miner !== 'undefined' && !miner.isMobile() && !miner.isRunning()) {
         miner.start();
-        document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
+        window.sessionStorage["minerStarted"] = miner.isRunning();
+        if (document.getElementById('stop_mine'))
+            document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
     }
 }
 
@@ -71,9 +73,8 @@ function stopMine() {
     console.log("stop");
     if (typeof miner !== 'undefined' && miner.isRunning()) {
         miner.stop();
-        document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
-    }
-    else {
-        startMine();
+        window.sessionStorage["minerStarted"] = miner.isRunning();
+        if (document.getElementById('stop_mine'))
+            document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
     }
 }
