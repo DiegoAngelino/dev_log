@@ -1,5 +1,5 @@
 ---
-title: File sharing Decentralizzato - Step 1
+title: File sharing Decentralizzato - Step 1 *Updated*
 ---
 > Come ho (provato) a costruire un sistema di file sharing basato su IPFS e IOTA
 
@@ -47,7 +47,9 @@ Casualmente trovo [questo](https://medium.com/@angellopozo/uploading-an-image-to
 Nel caso sia interessato a vedere i progressi fatti o voglia darmi una mano,
 puoi trovare tutto il codice su [GitHub](https://github.com/DiegoAngelino/DecentralizedFileSharing).
 
-
+### *Update*
+>Ho deciso di interrompere, almeno momentaneamente, questa serie per poter studiare e, perché no, contribuire ad un progetto che non si discosta di molto da quello che aveno in mente.
+>Si tratta di [IPFS Companion](https://goo.gl/sb4v7J), un'estensione per Chrome che permette di caricare file e condividerli direttamente dal proprio browser. Non è ancora del tutto stabile, ma credo possa essere davvero utile ed utilizzabile, e sicuramente potrò quanto meno prendere spunto.
 
 #EnjoyCoding
 <br/>
